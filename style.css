@@ -1,0 +1,119 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* General Configs */ 
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+html {font-size: 14px;}
+body {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--Dark-grayish-blue);
+    background-color: var(--Cream);
+}
+.perfume-title {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+h1 {
+    color: var(--Very-dark-blue);
+    font-family: 'Fraunces', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+.price {
+    color: var(--Dark-cyan);
+    font-size: 2.5rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+.btn {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.15em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all .3s;
+}
+.btn:hover {
+    background-color: var(--Very-dark-blue);
+}
+/* General Configs */ 
+/* Main Container - Mobile */
+.container {
+    max-width: 600px;
+    width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+}
+/* Main Container - Mobile */
+/* Image Section */
+.img-section {
+    background: url(images/image-product-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 300px;
+}
+/* Image Section */ 
+/* Content Section */
+.content-section {
+    flex: 1;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.content-section .title {
+    font-size: 2.4em;
+}
+.content-section .description {
+    line-height: 2;
+}
+.content-section .prices {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+/* Content Section */
+/* Main Container - Desktop */
+@media screen and (min-width: 600px) {
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        flex-direction: row;
+    }
+    .img-section {
+        background: url(images/image-product-desktop.jpg);
+        background-position: center;
+        background-size: cover;
+        flex: 1;
+    }
+}
